@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./fonts/fira_code.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cankyre</title>
+  </head>
+  <body>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("goto")) {
+        fetch("https://thingproxy.freeboard.io/fetch/https://rentry.co/cankyre_goto/raw")
+        .then(async r => {
+          const text = await r.text()
+          let textjson = {}
+          for (let i in text.split(";")) {
+            textjson[text.split(";")[i].split(":")[0]] = text.split(";")[i].split(":")[1]
+          }
+          if (textjson[params.get("goto")]) {
+            window.location.href = "https://" + textjson[params.get("goto")]
+          }
+        })
+      }
+    </script>
+    <h1 class="title is-2">Cankyre</h1>
+    <img src="./img/Cankyre.png" alt="My profile picture" class="pfp" />
+    <div class="goto columns" id="goto">
+      <div class="column is-one-fifth goto-sign">
+        <p class="is-vcentered">goto</p>
+      </div>
+      <div class="column">
+        <input type="text" class="input goto-input" id="goto-input" />
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
