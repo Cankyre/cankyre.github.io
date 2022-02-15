@@ -12,13 +12,9 @@
     <script>
       const params = new URLSearchParams(window.location.search);
       if (params.has("goto")) {
-        fetch("https://thingproxy.freeboard.io/fetch/https://rentry.co/cankyre_goto/raw")
+        fetch("https://parpaing-bot.thatcookie.repl.co/goto")
         .then(async r => {
-          const text = await r.text()
-          let textjson = {}
-          for (let i in text.split(";")) {
-            textjson[text.split(";")[i].split(":")[0]] = text.split(";")[i].split(":")[1]
-          }
+          const textjson = await r.json()
           if (textjson[params.get("goto")]) {
             window.location.href = "https://" + textjson[params.get("goto")]
           }
@@ -35,6 +31,7 @@
         <input type="text" class="input goto-input" id="goto-input" />
       </div>
     </div>
+    <button class="button is-info is-light helpbtn" onclick="window.open('https://github.com/Cankyre/cankyre.github.io','_blank')">Available gotos</button>
     <script src="main.js"></script>
   </body>
 </html>

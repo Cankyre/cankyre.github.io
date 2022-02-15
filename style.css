@@ -82,4 +82,14 @@ body {
     width: 30vw;
     border-radius: 100%;
   }
+
+  .helpbtn {
+    margin-top: 6vh;
+    height: 3vh;
+    font-size: 2vh;
+  }
+}
+
+.helpbtn {
+  margin-top: 6vh;
 }
