@@ -1,5 +1,5 @@
-# Cankyre.github.io
-## Which "gotos" are available?
+## Cankyre.github.io
+### Which "gotos" are available?
  - [readme](https://github.com/Cankyre#readme)
  - [form](https://cankyre.github.io/3-questions-report-form/)
  - [pbot](https://github.com/rdparpaing/parpaing-bot)
