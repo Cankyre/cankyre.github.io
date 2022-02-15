@@ -16,7 +16,7 @@
         .then(async r => {
           const textjson = await r.json()
           if (textjson[params.get("goto")]) {
-            window.location.href = "https://" + textjson[params.get("goto")]
+            window.location.href = textjson[params.get("goto")]
           }
         })
       }
