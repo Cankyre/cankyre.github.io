@@ -18,6 +18,7 @@
 - [webreadme](https://github.com/Cankyre/cankyre.github.io)
 - [fprojects](https://github.com/Cankyre#finished-projects)
 - [github](https://github.com/Cankyre)
+- [status](https://cankyre.github.io/status)
   <br>
   Many more are coming of course!
 
