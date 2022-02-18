@@ -67,11 +67,12 @@ body {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 1vw;
   width: 60vw;
   height: 45vw;
   margin-left: 50%;
+  margin-bottom: 3vh;
   transform: translate(-50%, 0);
 }
 
@@ -150,6 +151,15 @@ body {
   justify-content: space-evenly;
 }
 
+.btns.is-spaced > button  {
+  margin-bottom: 0.8em;
+}
+
+.tbsn.is-spaced > a > button  {
+  margin-bottom: 0.8em;
+}
+
+
 .blink.is-container > button {
   width: max-content;
 }
@@ -162,10 +172,18 @@ button.blink > span {
   font-family: "dripicons-v2";
 }
 
+.inline-title {
+  transform: translate(0, 25%);
+}
+
+.btns.is-spaced {
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 1400px) {
   .cards-grid {
     width: 81vw;
-    height: 54vw;
+    height: 81vw;
   }
   .card {
     min-height: 26vw;
