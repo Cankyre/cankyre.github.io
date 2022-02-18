@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="./img/Cankyre.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./fonts/fira_code/fira_code.css" />
     <link rel="stylesheet" href="./fonts/dropicons/webfont.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Cankyre</title>
   </head>
   <body>
@@ -34,12 +34,11 @@
         <input type="text" class="input goto-input" id="goto-input" />
       </div>
     </div>
-    <button
-      class="button is-info is-light helpbtn"
-      onclick="window.open('https://github.com/Cankyre/cankyre.github.io','_blank')"
-    >
-      Available gotos
-    </button>
+    <div class="btns">
+      <button class="button is-info is-light" onclick="window.open('https://github.com/Cankyre/cankyre.github.io','_blank')">Help</button>
+      <a href="./status.html"><button class="button is-primary is-light">Status</button></a>
+      <a href="https://cankyre.github.io/3-questions-report-form/"><button class="button is-danger is-light">Report</button></a>
+    </div>
     <h2 class="title is-3">My projects</h2>
     <div class="cards-grid">
       <div class="card" id="card1">
@@ -48,9 +47,11 @@
           <img src="./img/Cankyre.png" alt="Cankyre's website thumbnail" />
         </div>
         <p>
-          &emsp;This website. Contains a "goto" feature that transports the user
-          on ay Cankyre's product or social network. Also contains cards for
-          every project I code.
+          &emsp;This website. Contains a "goto" feature, a request/report form and a status page. Also contains cards for
+          every project I code. 
+          <span class="tag is-primary">HTML</span>
+          <span class="tag is-primary">CSS</span>
+          <span class="tag is-primary">JS</span>
         </p>
         <button
           class="button is-info is-light blink"
@@ -68,6 +69,9 @@
           &emsp;A website made for an online friends community. Contains a
           homepage with a beautiful DVD-like animation. Also has some
           "inside-jokes" webpages used for memes from the community.
+          <span class="tag is-primary">HTML</span>
+          <span class="tag is-primary">CSS</span>
+          <span class="tag is-primary">JS</span>
         </p>
         <div class="blink is-container">
           <button
@@ -98,6 +102,8 @@
           aliases for the symbols. Although it is multi-paradigm, I advise not
           to use this language for any big scale projects. Version 2 is
           currently in development and will be entirely rewritten.
+          <span class="tag is-primary">Python</span>
+          <span class="tag is-warning is-light">Not in development</span>
         </p>
         <div class="blink is-container">
           <button
@@ -129,16 +135,17 @@
           />
         </div>
         <p>
-          &emsp;A project entirely made in one day, that was used in order to
-          record the french TETR.IO Tetra League leaderboard. Is used in order
+          &emsp;A project made in one day that is used in order
           to periodically record any TETR.IO leaderboard.
+          <span class="tag is-primary">Node.JS</span>
+          <span class="tag is-danger">Abandoned</span>
         </p>
         <button
-            class="blink button is-link is-light"
-            onclick="window.open('https://github.com/Cankyre/Tetostats-recorder','_blank')"
-          >
-            <span>3</span> &nbsp;Github
-          </button>
+          class="blink button is-link is-light"
+          onclick="window.open('https://github.com/Cankyre/Tetostats-recorder','_blank')"
+        >
+          <span>3</span> &nbsp;Github
+        </button>
       </div>
       <div class="card" id="card5">
         <div class="title-box">
@@ -146,9 +153,10 @@
           <img src="./img/parpaing.png" alt="ParpaingBot's thumbnail" />
         </div>
         <p>
-          &emsp;A Discord bot made for the community Rotation de Parpaing. 
-          It contains an advanced media saving system and a social ranking system and some more.
-          Also has a REST API.
+          &emsp;A Discord bot made for an online community. It
+          contains an advanced media saving system and a social ranking system
+          and some more. Also has a REST API.
+          <span class="tag is-primary">Node.JS</span>
         </p>
         <button
           class="button is-info is-light blink"
@@ -160,11 +168,17 @@
       <div class="card" id="card6">
         <div class="title-box">
           <h4 class="title is-4">TetoBot</h4>
-          <img src="https://branding.osk.sh/tetrio-anim.gif" alt="TetoBot's thumbnail" />
+          <img
+            src="https://branding.osk.sh/tetrio-anim.gif"
+            alt="TetoBot's thumbnail"
+          />
         </div>
         <p>
-          &emsp;A Discord bot made for the community Blitzcord and was further expanded to sprint in TETR.IO. 
-          It might receive an update soon enough. Also had a REST API for account links.
+          &emsp;A Discord bot made for the community Blitzcord and was
+          expanded to sprint in TETR.IO. It might receive an update soon enough.
+          Also had an API.
+          <span class="tag is-primary">Node.JS</span>
+          <span class="tag is-warning">Deprecated</span>
         </p>
         <button
           class="button is-info is-light blink"
@@ -174,13 +188,17 @@
         </button>
       </div>
       <div class="card" id="card7">
-      <div class="title-box">
+        <div class="title-box">
           <h4 class="title is-4">Tetralino</h4>
           <img src="./img/tlino.jpg" alt="Tetralino's thumbnail" />
         </div>
         <p>
-          &emsp;A Block-stacking game made with Tetralino. 
-          Was unfortunately abandoned although the source code is still there.
+          &emsp;A Block-stacking game made with Tetralino. Was unfortunately
+          abandoned although the source code is still there.
+          <span class="tag is-primary">HTML</span>
+          <span class="tag is-primary">CSS</span>
+          <span class="tag is-primary">JS</span>
+          <span class="tag is-danger">Abandoned</span>
         </p>
         <button
           class="button is-info is-light blink"
