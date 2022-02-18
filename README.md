@@ -17,6 +17,7 @@
 - [botenv](https://discord.gg/ubmZ9DjpNG)
 - [webreadme](https://github.com/Cankyre/cankyre.github.io)
 - [fprojects](https://github.com/Cankyre#finished-projects)
+- [github](https://github.com/Cankyre)
   <br>
   Many more are coming of course!
 
