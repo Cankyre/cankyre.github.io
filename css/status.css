@@ -1,0 +1,28 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+body {
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+  text-align: center;
+}
+
+table {
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  margin-left: 50%;
+  flex-wrap: wrap;
+  transform: translate(-50%, 0);
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 440px) {
+  .h {
+    display: none;
+  }
+}

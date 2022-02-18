@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/Cankyre.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./fonts/fira_code/fira_code.css" />
+    <link rel="stylesheet" href="./fonts/dropicons/webfont.css" />
+    <link rel="stylesheet" href="./css/status.css" />
+    <title>Cankyre | App statuses</title>
+  </head>
+  <body>
+    <h1 class="title is-2">Cankyre</h1>
+    <h2 class="subtitle is-3">all APIs statuses</h2>
+    <table class="table is-striped is-hoverable">
+      <thead>
+        <tr>
+          <th>Service name</th>
+          <th>Status</th>
+          <th>Ping</th>
+          <th class="h">Uptime</th>
+          <th class="h">Downtime</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Tickets API</th>
+          <td id="tickets-1"></td>
+          <td id="tickets-2"></td>
+          <td class="h" id="tickets-3"></td>
+          <td class="h" id="tickets-4"></td>
+        </tr>
+        <tr>
+          <th>ParpaingBot API</th>
+          <td id="pbot-1"></td>
+          <td id="pbot-2"></td>
+          <td class="h" id="pbot-3"></td>
+          <td class="h" id="pbot-4"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="btns">
+      <button class="button is-info is-light" onclick="window.location.href='https://cankyre.github.io'">Home</button>
+      <button class="button is-warning is-light" onclick="location.reload()">Reload</button>
+      <button class="button is-danger is-light" onclick="window.open('https://cankyre.github.io?goto=form','_blank')">Report</button>
+    </div>
+    <p>
+      <span class="tag is-warning">NOTE:</span> The pings here are not absolute,
+      and will change depending on your network conditions.
+    </p>
+    <script>
+      const sent = Date.now();
+      fetch("https://parpaing-bot.thatcookie.repl.co/ping")
+        .then(async (r) => {
+          const received = Date.now();
+          const sreceived = await r.text();
+          document.getElementById("tickets-1").innerText = "✅ Online";
+          document.getElementById("pbot-1").innerText = "✅ Online";
+          document.getElementById("tickets-2").innerText =
+            received - sent + "ms";
+          document.getElementById("pbot-2").innerText = received - sent + "ms";
+          document.getElementById("tickets-3").innerText =
+            sreceived - sent + "ms";
+          document.getElementById("pbot-3").innerText = sreceived - sent + "ms";
+          document.getElementById("tickets-4").innerText =
+            received - sreceived + "ms";
+          document.getElementById("pbot-4").innerText =
+            received - sreceived + "ms";
+        })
+        .catch(() => {
+          document.getElementById("tickets-1").innerText = "❌ Offline";
+          document.getElementById("pbot-1").innerText = "❌ Offline";
+          document.getElementById("tickets-2").innerText = "❌";
+          document.getElementById("pbot-2").innerText = "❌";
+          document.getElementById("tickets-3").innerText = "❌";
+          document.getElementById("pbot-3").innerText = "❌";
+          document.getElementById("tickets-4").innerText = "❌";
+          document.getElementById("pbot-4").innerText = "❌";
+        });
+    </script>
+  </body>
+</html>
