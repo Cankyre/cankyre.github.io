@@ -13,7 +13,7 @@
   <body>
     <h1 class="title is-2">Cankyre</h1>
     <h2 class="subtitle is-3">all APIs statuses</h2>
-    <table class="table is-striped is-hoverable">
+    <table class="table">
       <thead>
         <tr>
           <th>Service name</th>
@@ -45,11 +45,15 @@
       <button class="button is-warning is-light" onclick="location.reload()">Reload</button>
       <button class="button is-danger is-light" onclick="window.open('https://cankyre.github.io?goto=form','_blank')">Report</button>
     </div>
-    <p>
-      <span class="tag is-warning">NOTE:</span> The pings here are not absolute,
-      and will change depending on your network conditions. <br>
-      <span class="tag is-danger">Warning:</span> The uptime and downtime might not be accurate, because of the APIs and system clocks not being synced.
-    </p>
+    <article class="message is-danger">
+      <div class="message-header">
+        Important informations
+      </div>
+      <div class="message-body">
+        The pings here are not absolute, and will change depending on your network conditions. <br>
+        The uptime and downtime might not be accurate, because of the APIs and system clocks not being synced.
+      </div>
+    </article>
     <script>
       const sent = Date.now();
       fetch("https://parpaing-bot.thatcookie.repl.co/ping")
@@ -79,6 +83,20 @@
           document.getElementById("tickets-4").innerText = "❌";
           document.getElementById("pbot-4").innerText = "❌";
         });
+    </script>
+    <script>
+      function setDarkTheme() {
+        const light = document.getElementsByClassName("is-light")
+        for (j=0;j<5;j++) {
+          for (i=0;i<light.length;i++) {
+            light[i].className = light[i].className.replace("is-light", "")
+          }
+        }
+      }
+
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setDarkTheme( )
+      }
     </script>
   </body>
 </html>

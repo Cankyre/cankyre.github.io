@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/Cankyre.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/switch.css">
     <link rel="stylesheet" href="./fonts/fira_code/fira_code.css" />
     <link rel="stylesheet" href="./fonts/dropicons/webfont.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -54,7 +55,7 @@
           <span class="tag is-primary">JS</span>
         </p>
         <button
-          class="button is-info is-light blink"
+          class="button is-link is-light blink"
           onclick="window.open('https://github.com/Cankyre/cankyre.github.io','_blank')"
         >
           <span>3</span>&nbsp;Github
@@ -81,7 +82,7 @@
             <span>#</span>&nbsp;Homepage
           </button>
           <button
-            class="button is-info is-light"
+            class="button is-link is-light"
             onclick="window.open('https://github.com/rdparpaing/rdparpaing.github.io','_blank')"
           >
             <span>3</span>&nbsp;Github
@@ -119,7 +120,7 @@
             <span>y</span>&nbsp;Documentation
           </button>
           <button
-            class="button is-info is-light"
+            class="button is-link is-light"
             onclick="window.open('https://github.com/NyaScript/NyaScript','_blank')"
           >
             <span>3</span>&nbsp;Version 2
@@ -159,7 +160,7 @@
           <span class="tag is-primary">Node.JS</span>
         </p>
         <button
-          class="button is-info is-light blink"
+          class="button is-link is-light blink"
           onclick="window.open('https://github.com/rdparpaing/parpaing-bot','_blank')"
         >
           <span>3</span>&nbsp;Github
@@ -181,7 +182,7 @@
           <span class="tag is-warning">Deprecated</span>
         </p>
         <button
-          class="button is-info is-light blink"
+          class="button is-link is-light blink"
           onclick="window.open('https://github.com/Cankyre/TetoBot','_blank')"
         >
           <span>3</span>&nbsp;Github
@@ -201,7 +202,7 @@
           <span class="tag is-danger">Abandoned</span>
         </p>
         <button
-          class="button is-info is-light blink"
+          class="button is-link is-light blink"
           onclick="window.open('https://github.com/Cankyre/Tetralino','_blank')"
         >
           <span>3</span>&nbsp;Github
@@ -217,5 +218,19 @@
       <button class="button is-danger is-light"  onclick="window.open('https://cankyre.github.io?goto=form','_blank')">Form</button>
     </div>
     <script src="main.js"></script>
+    <script>
+      function setDarkTheme() {
+        const light = document.getElementsByClassName("is-light")
+        for (j=0;j<5;j++) {
+          for (i=0;i<light.length;i++) {
+            light[i].className = light[i].className.replace("is-light", "")
+          }
+        }
+      }
+
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setDarkTheme( )
+      }
+    </script>
   </body>
 </html>

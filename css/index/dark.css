@@ -1,0 +1,36 @@
+body {
+  background-color: #2a2c30;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(236, 236, 236) !important;
+}
+
+.goto > .column {
+  padding: 0;
+}
+
+.goto-sign {
+  background-color: #d60f35;  
+  color: #fde0e6;
+}
+
+.goto-input {
+  background-color: #2a2c30;
+  border-color: #000;
+  color: rgb(236, 236, 236);
+}
+
+.card {
+  border: 2px #444 solid !important;
+  box-shadow: 0 0.5em 1em -0.125em #111;
+  background-color: #2a2c30;
+}
+
+.card:hover {
+  border: 2px #666 solid !important;
+}
+
+.card > p {
+  color: rgb(236, 236, 236);
+}

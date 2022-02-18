@@ -1,0 +1,12 @@
+.goto-sign {
+  background-color: #fde0e6;
+  color: #d60f35;
+}
+
+.card {
+  border: 2px rgb(236, 236, 236) solid;
+}
+
+.card:hover {
+  border: 2px black solid;
+}

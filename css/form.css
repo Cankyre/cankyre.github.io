@@ -1,0 +1,54 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+.headtitle {
+  text-align: center;
+  margin-top: 2vh;
+}
+
+form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.is-bordered {
+  border: 2px rgb(239, 239, 239) solid;
+  padding: 5% 5% 5% 5%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: #2a2c30 !important;
+  }
+
+  h1, h2, h3, label {
+    color: rgb(239, 239, 239) !important;
+  }
+
+  .is-bordered {
+    border-color: #444;
+  }
+
+  .textarea {
+    color:rgb(239, 239, 239) !important;
+    background-color: #444;
+    border-color: #444;
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .is-bordered {
+    border-color: rgb(239, 239, 239);
+  }
+}

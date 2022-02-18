@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/Cankyre/cankyre.github.io/main/img/Cankyre.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/form.css" />
+    <title>Report form</title>
+  </head>
+  <body>
+    <h1 class="title is-3 headtitle">
+      Cankyre's 3-questions request/report form
+    </h1>
+    <h2 class="subtitle is-4 headtitle">
+      Issue reports/Feature requests for Cankyre products
+    </h2>
+    <div class="form-container">
+      <form>
+        <div class="field is-bordered" id="q1-outer">
+          <label for="product" class="label"
+            >1. For which product would you like to report/request?</label
+          >
+          <div class="select">
+            <select name="q1" id="q1">
+              <option value="ParpaingBot">ParpaingBot</option>
+              <option value="rdparpaing.github.io">Rdparpaing.github.io</option>
+              <option value="NyaScript">NyaScript</option>
+              <option value="NyaScript-vscode">NyaScript-vscode</option>
+              <option value="Tetostats-recorder">Tetostats-recorder</option>
+              <option value="Tetobot">Tetobot</option>
+              <option value="cankyre.github.io">Cankyre.github.io</option>
+              <option value="other">Other (describe in question 3)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field is-bordered" id="q2-outer">
+          <label for="frir" class="label"
+            >2. Are you making an issue report or a feature request?
+          </label>
+          <div class="control" id="q2">
+            <label class="radio">
+              <input type="radio" name="frir" />
+              Issue report
+            </label>
+            <label class="radio">
+              <input type="radio" name="frir" />
+              Feature request
+            </label>
+            <label class="radio">
+              <input type="radio" name="frir" />
+              Other (describe in question 3)
+            </label>
+          </div>
+        </div>
+        <div class="field is-bordered" id="q3-outer">
+          <label for="message" class="label"
+            >3. Please describe your issue.
+            <span class="tag is-danger is-light">NOTE:</span> if you want me to
+            get in touch, please let an email address or your Discord
+            username. You can also join the support server!</label
+          >
+          <label class="label"></label>
+          <div class="control">
+            <textarea
+              class="textarea"
+              placeholder="Your issue"
+              id="q3"
+            ></textarea>
+          </div>
+        </div>
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" id="submit">Submit</button>
+          </div>
+          <div class="control">
+            <button class="button is-success is-light" id="home">Home</button>
+          </div>
+          <div class="control">
+            <button
+              class="button is-link is-light"
+              onclick="window.open('https://cankyre.github.io?goto=botenv','_blank')"
+            >
+              Support server
+            </button>
+          </div>
+          <div class="control">
+            <button
+              class="button is-info is-light"
+              onclick="window.open('https://github.com/Cankyre/3-questions-report-form','_blank')"
+            >
+              Help
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="./form.js"></script>
+    <script>
+      function setDarkTheme() {
+        const light = document.getElementsByClassName("is-light")
+        for (j=0;j<5;j++) {
+          for (i=0;i<light.length;i++) {
+            light[i].className = light[i].className.replace("is-light", "")
+          }
+        }
+      }
+
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setDarkTheme( )
+      }
+    </script>
+  </body>
+</html>
