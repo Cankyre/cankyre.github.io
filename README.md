@@ -19,3 +19,11 @@
 - [fprojects](https://github.com/Cankyre#finished-projects)
   <br>
   Many more are coming of course!
+
+### Form - How to deal with the color codes:
+
+- **The frames are gray:** Nothing to report, proceed as intended.
+- **The frames are green:** The ticket has been sent AND received, everything has worked
+- **The frames are red:** There is a problem with your input. Be sure to have checked one radio button per question and to have sent a text. Maybe the text is too long. Maybe you have sent a ticket less than 5 minutes ago.
+- **The frames are yellow:** There is an issue from Discord. Please send a Discord DM to Cankyre#4178 immediatly
+- **The frames are black:** An unexpected issue occured. DM Cankyre#4718 imeediatly.
