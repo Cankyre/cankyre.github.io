@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./img/Cankyre.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/switch.css">
     <link rel="stylesheet" href="./fonts/fira_code/fira_code.css" />
     <link rel="stylesheet" href="./fonts/dropicons/webfont.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -15,11 +14,11 @@
     <script>
       const params = new URLSearchParams(window.location.search);
       if (params.has("goto")) {
-        fetch("https://parpaing-bot.thatcookie.repl.co/goto").then(
+        fetch("https://central-api.thatcookie.repl.co/goto/" + encodeURI(params.get("goto"))).then(
           async (r) => {
             const textjson = await r.json();
-            if (textjson[params.get("goto")]) {
-              window.location.href = textjson[params.get("goto")];
+            if (textjson[0]["url"]) {
+              window.location.href = textjson[0]["url"];
             }
           }
         );
@@ -38,7 +37,7 @@
     <div class="btns">
       <button class="button is-info is-light" onclick="window.open('https://github.com/Cankyre/cankyre.github.io','_blank')">Help</button>
       <a href="./status.html"><button class="button is-primary is-light">Status</button></a>
-      <a href="https://cankyre.github.io/3-questions-report-form/"><button class="button is-danger is-light">Report</button></a>
+      <a href="https://cankyre.github.io/form/"><button class="button is-danger is-light">Report</button></a>
     </div>
     <h2 class="title is-3">My projects</h2>
     <div class="cards-grid">
@@ -215,7 +214,7 @@
       <button class="button is-link is-light"    onclick="window.open('https://cankyre.github.io?goto=twt','_blank')">Twitter</button>
       <button class="button is-primary is-light" onclick="window.open('mailto:contact.thatcookie@gmail.com','_blank')">Email</button>
       <button class="button is-light is-warning" onclick="window.open('https://cankyre.github.io?goto=botenv','_blank')">Discord</button>
-      <button class="button is-danger is-light"  onclick="window.open('https://cankyre.github.io?goto=form','_blank')">Form</button>
+      <button class="button is-danger is-light"  onclick="window.open('https://cankyre.github.io/form/','_blank')">Form</button>
     </div>
     <script src="main.js"></script>
     <script>

@@ -36,7 +36,7 @@ submitBtn.addEventListener("click", async (ev) => {
       return;
     }
     const res = await fetch(
-      `https://parpaing-bot.thatcookie.repl.co/tickets/create?q1=${encodeURIComponent(
+      `https://central-api.thatcookie.repl.co/tickets?q1=${encodeURIComponent(
         q1r
       )}&q2=${encodeURIComponent(q2r)}&q3=${encodeURIComponent(q3.value)}`,
       {
