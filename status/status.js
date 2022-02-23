@@ -9,16 +9,16 @@ function createChart(datasets) {
   for (i in datasets) {
     obj1.push({
       x: Date.parse(datasets[i].created_at),
-      y: !["Offline", "Major outage"].includes(JSON.parse(datasets[i].status).pbot[1])
-        ? JSON.parse(datasets[i].status).pbot[1] : 0
+      y: !["Offline", "Major outage"].includes(JSON.parse(datasets[i].status).pbot ? JSON.parse(datasets[i].status).pbot[1] : 0)
+        ? (JSON.parse(datasets[i].status).pbot ? JSON.parse(datasets[i].status).pbot[1] : 0) : 0
     })
   }
   let obj2 = []
   for (i in datasets) {
     obj2.push({
       x: Date.parse(datasets[i].created_at),
-      y: !["Offline", "Major outage"].includes(JSON.parse(datasets[i].status).pbot[1])
-      ? JSON.parse(datasets[i].status)["pbot-api"][1] : 0
+      y: !["Offline", "Major outage"].includes(JSON.parse(datasets[i].status)["pbot-api"] ? JSON.parse(datasets[i].status)["pbot-api"][1] : 0)
+      ? (JSON.parse(datasets[i].status)["pbot-api"] ? JSON.parse(datasets[i].status)["pbot-api"][1] : 0) : 0
     })
   }
   const data = {
@@ -43,7 +43,7 @@ function createChart(datasets) {
     type: 'line',
     data: data,
   };
-  const myChart = new Chart(
+  new Chart(
     document.getElementById('chart'),
     config
   );
