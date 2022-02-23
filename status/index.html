@@ -9,83 +9,23 @@
     <link rel="stylesheet" href="../fonts/dropicons/webfont.css" />
     <link rel="stylesheet" href="../css/status.css" />
     <title>Cankyre | App statuses</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script>
   </head>
   <body>
     <h1 class="title is-2">Cankyre</h1>
     <h2 class="subtitle is-3">all APIs statuses</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Service name</th>
-          <th>Status</th>
-          <th>Ping</th>
-          <th class="h">Uptime</th>
-          <th class="h">Downtime</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>Tickets API</th>
-          <td id="tickets-1"></td>
-          <td id="tickets-2"></td>
-          <td class="h" id="tickets-3"></td>
-          <td class="h" id="tickets-4"></td>
-        </tr>
-        <tr>
-          <th>ParpaingBot API</th>
-          <td id="pbot-1"></td>
-          <td id="pbot-2"></td>
-          <td class="h" id="pbot-3"></td>
-          <td class="h" id="pbot-4"></td>
-        </tr>
-      </tbody>
-    </table>
+    <div id="canvas-container">
+      <canvas id="chart"></canvas>
+    </div>
     <div class="btns">
       <button class="button is-info is-light" onclick="window.location.href='https://cankyre.github.io'">Home</button>
       <button class="button is-warning is-light" onclick="location.reload()">Reload</button>
       <button class="button is-danger is-light" onclick="window.open('https://cankyre.github.io/form/','_blank')">Report</button>
     </div>
-    <article class="message is-danger">
-      <div class="message-header">
-        Important informations
-      </div>
-      <div class="message-body">
-        The pings here are not absolute, and will change depending on your network conditions. <br>
-        The uptime and downtime might not be accurate, because of the APIs and system clocks not being synced.
-      </div>
-    </article>
-    <script>
-      const sent = Date.now();
-      fetch("https://parpaing-bot.thatcookie.repl.co/ping")
-        .then(async (r) => {
-          const received = Date.now();
-          const sreceived = await r.text();
-          document.getElementById("tickets-1").innerText = "✅ Online";
-          document.getElementById("pbot-1").innerText = "✅ Online";
-          document.getElementById("tickets-2").innerText =
-            received - sent + "ms";
-          document.getElementById("pbot-2").innerText = received - sent + "ms";
-          document.getElementById("tickets-3").innerText =
-            sreceived - sent + "ms";
-          document.getElementById("pbot-3").innerText = sreceived - sent + "ms";
-          document.getElementById("tickets-4").innerText =
-            received - sreceived + "ms";
-          document.getElementById("pbot-4").innerText =
-            received - sreceived + "ms";
-        })
-        .catch(() => {
-          document.getElementById("tickets-1").innerText = "❌ Offline";
-          document.getElementById("pbot-1").innerText = "❌ Offline";
-          document.getElementById("tickets-2").innerText = "❌";
-          document.getElementById("pbot-2").innerText = "❌";
-          document.getElementById("tickets-3").innerText = "❌";
-          document.getElementById("pbot-3").innerText = "❌";
-          document.getElementById("tickets-4").innerText = "❌";
-          document.getElementById("pbot-4").innerText = "❌";
-        });
-    </script>
     <script>
       function setDarkTheme() {
+        Chart.defaults.color = "#fff"
         const light = document.getElementsByClassName("is-light")
         for (j=0;j<5;j++) {
           for (i=0;i<light.length;i++) {
@@ -98,5 +38,6 @@
         setDarkTheme( )
       }
     </script>
+    <script src="./status.js"></script>
   </body>
 </html>

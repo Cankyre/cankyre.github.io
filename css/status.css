@@ -28,9 +28,21 @@ table {
   transform: translate(-50%, 0);
 }
 
+#canvas-container {
+  width: 50vw;  
+  margin-left: 50%;
+  margin-bottom: 2vh;
+  transform: translate(-50%,0);
+}
+
+
 @media screen and (max-width: 440px) {
   .h {
     display: none;
+  }
+  #canvas-container {
+    width: 90vw;
+    height: 50vw;
   }
 }
 
@@ -41,6 +53,11 @@ table {
 
   .message {
     width: 90%;
+  }
+
+  #canvas-container {
+    width: 80vw;
+    height: 40vw;
   }
 }
 
