@@ -13,7 +13,10 @@ function checkRadio(l) {
   return 0;
 }
 
-document.getElementById("home").addEventListener('click', (ev) => {ev.preventDefault(); window.location.href = "https://cankyre.github.io"})
+document.getElementById("home").addEventListener("click", (ev) => {
+  ev.preventDefault();
+  window.location.href = "https://cankyre.github.io";
+});
 
 submitBtn.addEventListener("click", async (ev) => {
   ev.preventDefault();

@@ -150,14 +150,13 @@ body {
   justify-content: space-evenly;
 }
 
-.btns.is-spaced > button  {
+.btns.is-spaced > button {
   margin-bottom: 0.8em;
 }
 
-.tbsn.is-spaced > a > button  {
+.tbsn.is-spaced > a > button {
   margin-bottom: 0.8em;
 }
-
 
 .blink.is-container > button {
   width: max-content;

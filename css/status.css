@@ -29,12 +29,11 @@ table {
 }
 
 #canvas-container {
-  width: 50vw;  
+  width: 50vw;
   margin-left: 50%;
   margin-bottom: 2vh;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
 }
-
 
 @media screen and (max-width: 440px) {
   .h {
@@ -66,17 +65,23 @@ table {
     background-color: #2a2c30 !important;
   }
 
-  h1, h2, h3, label {
+  h1,
+  h2,
+  h3,
+  label {
     color: rgb(239, 239, 239) !important;
   }
 
-  th, tr, td {
-    color:rgb(239, 239, 239) !important;
+  th,
+  tr,
+  td {
+    color: rgb(239, 239, 239) !important;
     background-color: #2a2c30;
     border-color: #444 !important;
   }
 
-  thead, tbody {
+  thead,
+  tbody {
     border-color: #444;
   }
 

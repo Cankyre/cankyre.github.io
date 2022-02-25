@@ -14,14 +14,15 @@
     <script>
       const params = new URLSearchParams(window.location.search);
       if (params.has("goto")) {
-        fetch("https://central-api.thatcookie.repl.co/goto/" + encodeURI(params.get("goto"))).then(
-          async (r) => {
-            const textjson = await r.json();
-            if (textjson[0]["url"]) {
-              window.location.href = textjson[0]["url"];
-            }
+        fetch(
+          "https://central-api.thatcookie.repl.co/goto/" +
+            encodeURI(params.get("goto"))
+        ).then(async (r) => {
+          const textjson = await r.json();
+          if (textjson[0]["url"]) {
+            window.location.href = textjson[0]["url"];
           }
-        );
+        });
       }
     </script>
     <h1 class="title is-2">Cankyre</h1>
@@ -35,9 +36,21 @@
       </div>
     </div>
     <div class="btns">
-      <button class="button is-info is-light" onclick="window.open('https://github.com/Cankyre/cankyre.github.io','_blank')">Help</button>
-      <a href="./status/index.html"><button class="button is-primary is-light">Status</button></a>
-      <a href="https://cankyre.github.io/form/"><button class="button is-danger is-light">Report</button></a>
+      <button
+        class="button is-info is-light"
+        onclick="window.open('https://github.com/Cankyre/cankyre.github.io','_blank')"
+      >
+        Help
+      </button>
+      <a href="./status/index.html"
+        ><button class="button is-success is-light">Status</button></a
+      >
+      <a href="https://cankyre.github.io/rules/"
+        ><button class="button is-primary is-light">Rules</button></a
+      >
+      <a href="https://cankyre.github.io/form/"
+        ><button class="button is-danger is-light">Report</button></a
+      >
     </div>
     <h2 class="title is-3">My projects</h2>
     <div class="cards-grid">
@@ -47,8 +60,8 @@
           <img src="./img/Cankyre.png" alt="Cankyre's website thumbnail" />
         </div>
         <p>
-          &emsp;This website. Contains a "goto" feature, a request/report form and a status page. Also contains cards for
-          every project I code. 
+          &emsp;This website. Contains a "goto" feature, a request/report form
+          and a status page. Also contains cards for every project I code.
           <span class="tag is-primary">HTML</span>
           <span class="tag is-primary">CSS</span>
           <span class="tag is-primary">JS</span>
@@ -135,8 +148,8 @@
           />
         </div>
         <p>
-          &emsp;A project made in one day that is used in order
-          to periodically record any TETR.IO leaderboard.
+          &emsp;A project made in one day that is used in order to periodically
+          record any TETR.IO leaderboard.
           <span class="tag is-primary">Node.JS</span>
           <span class="tag is-danger">Abandoned</span>
         </p>
@@ -153,9 +166,9 @@
           <img src="./img/parpaing.png" alt="ParpaingBot's thumbnail" />
         </div>
         <p>
-          &emsp;A Discord bot made for an online community. It
-          contains an advanced media saving system and a social ranking system
-          and some more. Also has a REST API.
+          &emsp;A Discord bot made for an online community. It contains an
+          advanced media saving system and a social ranking system and some
+          more. Also has a REST API.
           <span class="tag is-primary">Node.JS</span>
         </p>
         <button
@@ -174,9 +187,9 @@
           />
         </div>
         <p>
-          &emsp;A Discord bot made for the community Blitzcord and was
-          expanded to sprint in TETR.IO. It might receive an update soon enough.
-          Also had an API.
+          &emsp;A Discord bot made for the community Blitzcord and was expanded
+          to sprint in TETR.IO. It might receive an update soon enough. Also had
+          an API.
           <span class="tag is-primary">Node.JS</span>
           <span class="tag is-warning">Deprecated</span>
         </p>
@@ -209,26 +222,54 @@
       </div>
     </div>
     <h2 class="title is-3">Contact me</h2>
-    <div class="btns is-spaced">
-      <button class="button is-info is-light"    onclick="window.open('https://github.com/Cankyre/','_blank')">Github</button>
-      <button class="button is-link is-light"    onclick="window.open('https://cankyre.github.io?goto=twt','_blank')">Twitter</button>
-      <button class="button is-primary is-light" onclick="window.open('mailto:contact.thatcookie@gmail.com','_blank')">Email</button>
-      <button class="button is-light is-warning" onclick="window.open('https://cankyre.github.io?goto=botenv','_blank')">Discord</button>
-      <button class="button is-danger is-light"  onclick="window.open('https://cankyre.github.io/form/','_blank')">Form</button>
+    <div class="btns is-spaced" id="contact">
+      <button
+        class="button is-info is-light"
+        onclick="window.open('https://github.com/Cankyre/','_blank')"
+      >
+        Github
+      </button>
+      <button
+        class="button is-link is-light"
+        onclick="window.open('https://cankyre.github.io?goto=twt','_blank')"
+      >
+        Twitter
+      </button>
+      <button
+        class="button is-primary is-light"
+        onclick="window.open('mailto:cankyre@gmail.com','_blank')"
+      >
+        Email
+      </button>
+      <button
+        class="button is-light is-warning"
+        onclick="window.open('https://cankyre.github.io?goto=botenv','_blank')"
+      >
+        Discord
+      </button>
+      <button
+        class="button is-danger is-light"
+        onclick="window.open('https://cankyre.github.io/form/','_blank')"
+      >
+        Form
+      </button>
     </div>
     <script src="main.js"></script>
     <script>
       function setDarkTheme() {
-        const light = document.getElementsByClassName("is-light")
-        for (j=0;j<5;j++) {
-          for (i=0;i<light.length;i++) {
-            light[i].className = light[i].className.replace("is-light", "")
+        const light = document.getElementsByClassName("is-light");
+        for (j = 0; j < 5; j++) {
+          for (i = 0; i < light.length; i++) {
+            light[i].className = light[i].className.replace("is-light", "");
           }
         }
       }
 
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setDarkTheme( )
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        setDarkTheme();
       }
     </script>
   </body>

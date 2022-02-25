@@ -19,6 +19,16 @@
     <h2 class="subtitle is-4 headtitle">
       Issue reports/Feature requests for Cankyre products
     </h2>
+    <article class="message is-warning">
+      <div class="message-header">
+        Warning
+      </div>
+      <div class="message-body">
+        If the below form turns out not to work because of a server error, please report it
+        to me with <a href="mailto:cankyre@gmail.com">an email</a> or with any other way to 
+        <a href="../index.html#contact">contact me</a> as soon as possible.
+      </div>
+    </article>
     <div class="form-container">
       <form>
         <div class="field is-bordered" id="q1-outer">
@@ -53,6 +63,10 @@
             </label>
             <label class="radio">
               <input type="radio" name="frir" />
+              Content/user report
+            </label>
+            <label class="radio">
+              <input type="radio" name="frir" />
               Other (describe in question 3)
             </label>
           </div>
@@ -61,8 +75,8 @@
           <label for="message" class="label"
             >3. Please describe your issue.
             <span class="tag is-danger is-light">NOTE:</span> if you want me to
-            get in touch, please let an email address or your Discord
-            username. You can also join the support server!</label
+            get in touch, please let an email address or your Discord username.
+            You can also join the support server!</label
           >
           <label class="label"></label>
           <div class="control">
@@ -102,16 +116,19 @@
     <script src="./form.js"></script>
     <script>
       function setDarkTheme() {
-        const light = document.getElementsByClassName("is-light")
-        for (j=0;j<5;j++) {
-          for (i=0;i<light.length;i++) {
-            light[i].className = light[i].className.replace("is-light", "")
+        const light = document.getElementsByClassName("is-light");
+        for (j = 0; j < 5; j++) {
+          for (i = 0; i < light.length; i++) {
+            light[i].className = light[i].className.replace("is-light", "");
           }
         }
       }
 
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        setDarkTheme( )
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        setDarkTheme();
       }
     </script>
   </body>

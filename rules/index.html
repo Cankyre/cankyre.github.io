@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/Cankyre.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/rules.css" />
+    <title>Cankyre</title>
+  </head>
+  <body>
+    <h1 class="title is-2">Cankyre</h1>
+    <h3 class="subtitle is-3">Terms of use for Cankyre's products</h3>
+    <article class="message is-dark">
+      <div class="message-header">
+        <p>Rules that applies to every product</p>
+      </div>
+      <div class="message-body">
+        <li>
+          Every open-source project I make fall under the
+          <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL v3.0</a>
+          License, which makes everyone able to share, modify and use the source
+          code as long as they do not make closed-source versions. Please do not
+          make commercial use out of my source code, unless directly
+          <a href="../index.html#contact">contacting me</a> and wait for an
+          offer, which will certainly contain royalties and/or direct mentions
+          in the final commercial product.
+        </li>
+        <br />
+        <li>
+          It is strictly forbidden to publish and share content that is illegal
+          under french law, or discriminatory in any way. Please mind that some
+          exceptions can be made in the case of humor. Harrassment and toxicity
+          are also disallowed. By using one of Cankyre's product, you have the
+          responsibility of reporting content that does not respect the previous
+          sentence, by using either the
+          <a href="../form/index.html">report form</a> or the
+          <a href="mailto:cankyre@gmail.com">support email</a>.
+        </li>
+        <br />
+        <li>
+          It is forbidden to spam the APIs in order to break or DDoS the servers
+          no matter what your intentions are. If you think that there is a bug
+          in the systems, please <a href="../form/index.html">report it</a>.
+        </li>
+        <br />
+        <li>
+          By using one of Cankyre's product, you agree to the above rules and to
+          the further instructions that are below, if they exist.
+        </li>
+      </div>
+    </article>
+    <article class="message is-link">
+      <div class="message-header">
+        <p>Cankyre.github.io</p>
+      </div>
+      <div class="message-body">
+        <li>
+          You may not send more than one ticket every 5 minutes. On the website,
+          a security has been set in order to prevent unintentional spam. Please
+          also <a href="../index.html#contact">ask me</a> first before directly
+          using the tickets API and precise what the project is and why you are
+          making it.
+        </li>
+      </div>
+    </article>
+    <article class="message is-info">
+      <div class="message-header">
+        <p>ParpaingBot</p>
+      </div>
+      <div class="message-body">
+        <li>
+          It is forbidden to use the bot with its original account and data
+          outside of RdP's Discord server, other than for pure testing purpose,
+          and without reading ANY data that comes from the "archive" or "groups"
+          table of the original database.
+        </li>
+        <br />
+        <li>
+          It is forbidden to use any content that was read from the database
+          outside of RdP's Discord server without the agreement of at least one
+          of RdP's admins or the content author. Therefore you will be unable to
+          repost or share the database content without the said agreement,
+          unless if in the comment of one of the posts it is explicitly said
+          that the resource is available for public use. Content creators may
+          give extra-repost rights or restrictions to their posts by explicitly
+          writing them in the comment section.
+        </li>
+        <br />
+        <li>
+          It is forbidden to abuse or attempt to abuse the SRS system in any
+          way, with a goal to raise or to lower one's social credit. Any abuse
+          will be punished.
+        </li>
+      </div>
+    </article>
+    <div class="btns is-spaced">
+      <a href="../index.html"
+        ><button class="button is-primary is-light">Home</button></a
+      >
+      <button
+        class="button is-danger is-light"
+        onclick="window.open('https://cankyre.github.io/form/','_blank')"
+      >
+        Report
+      </button>
+    </div>
+    <script>
+      function setDarkTheme() {
+        const light = document.getElementsByClassName("is-light");
+        for (j = 0; j < 5; j++) {
+          for (i = 0; i < light.length; i++) {
+            light[i].className = light[i].className.replace("is-light", "");
+          }
+        }
+      }
+
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      ) {
+        setDarkTheme();
+      }
+    </script>
+  </body>
+</html>

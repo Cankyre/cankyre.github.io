@@ -1,0 +1,53 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+body {
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+  text-align: center;
+}
+
+.message {
+  width: 50vw;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  text-align: justify;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+  margin-left: 50%;
+  flex-wrap: wrap;
+  transform: translate(-50%, 0);
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .message {
+    width: 80vw;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .message.is-dark .message-header {
+    background-color: black !important;
+  }
+
+  .message .message-body {
+    background-color: #333 !important;
+    color: rgb(239, 239, 239) !important;
+  }
+
+  html {
+    background-color: #2a2c30 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  label,
+  p {
+    color: rgb(239, 239, 239) !important;
+  }
+}

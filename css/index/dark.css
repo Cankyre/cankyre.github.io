@@ -2,7 +2,12 @@ body {
   background-color: #2a2c30;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: rgb(236, 236, 236) !important;
 }
 
@@ -11,7 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .goto-sign {
-  background-color: #d60f35;  
+  background-color: #d60f35;
   color: #fde0e6;
 }
 
