@@ -275,7 +275,7 @@ table td img {
   .card {
     border: 2px #444 solid !important;
     box-shadow: 0 0.5em 1em -0.125em #111;
-    background-color: #2a2c30;
+    background-color: #222;
   }
 
   .card:hover {
@@ -286,4 +286,16 @@ table td img {
     color: rgb(236, 236, 236);
   }
 
+  #playername, #table {
+    color: white !important;
+    background-color: #222;
+  }
+
+  th {
+    color: white !important;
+  }
+
+  ::placeholder {
+    color: rgb(128, 128, 128) !important;
+  }
 }
