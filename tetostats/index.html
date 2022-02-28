@@ -13,8 +13,20 @@
     <title>TetoStats</title>
   </head>
   <body>
+    <script src="../js/pingCentral.js"></script>
     <h1 class="title is-2">TetoStats</h1>
     <h1 class="subtitle is-5">by Cankyre</h1>
+    <div class="message is-danger" id="api-outage-message">
+      <div class="message-header">
+        <h1>API outage</h1>
+      </div>
+      <div class="message-body">
+        We are currently experiencing an API outage. TetoStats will therefore
+        not work properly. Please
+        <a href="mailto:cankyre@github.io">report it by email</a> in order for
+        us to investigate the issue.
+      </div>
+    </div>
     <div class="app">
       <div class="half" id="half1">
         <h1 class="title is-5">Countries leaderboard</h1>
@@ -34,9 +46,7 @@
             </select>
           </div>
         </div>
-        <table class="table is-striped is-bordered" id="table">
-
-        </table>
+        <table class="table is-striped is-bordered" id="table"></table>
       </div>
       <div class="half" id="half2">
         <div class="vhalf" id="vhalf1">
@@ -45,10 +55,13 @@
         </div>
         <div class="vhalf" id="vhalf2">
           <h1 class="title is-5">Player stats</h1>
-          <input class="input" id="playername" type="text" placeholder="Enter player">
-          <div class="card" id="playercard">
-            
-          </div>
+          <input
+            class="input"
+            id="playername"
+            type="text"
+            placeholder="Enter player"
+          />
+          <div class="card" id="playercard"></div>
         </div>
       </div>
     </div>
@@ -78,7 +91,7 @@
             light[i].className = light[i].className.replace("is-light", "");
           }
         }
-        document.getElementById('table').className = "table is-bordered"
+        document.getElementById("table").className = "table is-bordered";
       }
 
       if (

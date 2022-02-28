@@ -39,7 +39,6 @@ body {
   padding: 0 5%;
 }
 
-
 #vhalf2 {
   height: 50%;
   padding: 5% 1%;
@@ -90,7 +89,16 @@ table {
 
 table td img {
   height: 1.1em;
-  clip-path: polygon(0.15em 0, calc(100% - 0.15em) 0, 100% 0.15em, 100% calc(100% - 0.15em), calc(100% - 0.15em) 100%, 0.15em 100%, 0 calc(100% - 0.15em), 0 0.15em)
+  clip-path: polygon(
+    0.15em 0,
+    calc(100% - 0.15em) 0,
+    100% 0.15em,
+    100% calc(100% - 0.15em),
+    calc(100% - 0.15em) 100%,
+    0.15em 100%,
+    0 calc(100% - 0.15em),
+    0 0.15em
+  );
 }
 
 .input {
@@ -183,12 +191,27 @@ table td img {
   margin-bottom: 0 !important;
 }
 
-
 .ubox img {
   vertical-align: middle;
   margin-left: 0.3em;
   height: 1.1em;
-  clip-path: polygon(0.15em 0, calc(100% - 0.15em) 0, 100% 0.15em, 100% calc(100% - 0.15em), calc(100% - 0.15em) 100%, 0.15em 100%, 0 calc(100% - 0.15em), 0 0.15em)
+  clip-path: polygon(
+    0.15em 0,
+    calc(100% - 0.15em) 0,
+    100% 0.15em,
+    100% calc(100% - 0.15em),
+    calc(100% - 0.15em) 100%,
+    0.15em 100%,
+    0 calc(100% - 0.15em),
+    0 0.15em
+  );
+}
+
+#api-outage-message {
+  width: 80vw;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -204,7 +227,8 @@ table td img {
     display: block;
   }
 
-  .half, .vhalf {
+  .half,
+  .vhalf {
     border: none !important;
     width: 60vw;
     height: 80vh;
@@ -212,17 +236,16 @@ table td img {
     margin-bottom: 2em;
     transform: translate(-50%, 0);
   }
-  
+
   #half1 {
     overflow-y: scroll;
   }
-  
+
   #vhalf1 {
     height: 50%;
     padding: 0 5%;
   }
-  
-  
+
   #vhalf2 {
     height: 50%;
     padding: 5% 1%;
@@ -244,7 +267,8 @@ table td img {
     width: 0;
   }
 
-  .half, .vhalf {
+  .half,
+  .vhalf {
     border: none !important;
     width: 90vw;
     height: 80vh;
@@ -259,10 +283,11 @@ table td img {
 }
 
 @media (prefers-color-scheme: dark) {
-  body, table {
+  body,
+  table {
     background-color: #2a2c30;
   }
-  
+
   h1,
   h2,
   h3,
@@ -286,12 +311,16 @@ table td img {
     color: rgb(236, 236, 236);
   }
 
-  #playername, #table {
+  #playername,
+  #table {
     color: white !important;
     background-color: #222;
   }
 
-  table, td, th, tr {
+  table,
+  td,
+  th,
+  tr {
     border-color: #2a2c30 !important;
   }
 

@@ -13,12 +13,24 @@
     <title>Report form</title>
   </head>
   <body>
+    <script src="../js/pingCentral.js"></script>
     <h1 class="title is-3 headtitle">
       Cankyre's 3-questions request/report form
     </h1>
     <h2 class="subtitle is-4 headtitle">
       Issue reports/Feature requests for Cankyre products
     </h2>
+    <div class="message is-danger" id="api-outage-message">
+      <div class="message-header">
+        <h1>API outage</h1>
+      </div>
+      <div class="message-body">
+        We are currently experiencing an API outage. Therefore this form will
+        not work as intended. Please
+        <a href="mailto:cankyre@github.io">report it by email</a> in order for
+        us to investigate the issue.
+      </div>
+    </div>
     <article class="message is-warning">
       <div class="message-header">Warning</div>
       <div class="message-body">

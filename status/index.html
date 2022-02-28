@@ -12,8 +12,20 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
   </head>
   <body>
+    <script src="../js/pingCentral.js"></script>
     <h1 class="title is-2">Cankyre</h1>
     <h2 class="subtitle is-3">all apps statuses</h2>
+    <div class="message is-danger" id="api-outage-message">
+      <div class="message-header">
+        <h1>API outage</h1>
+      </div>
+      <div class="message-body">
+        We are currently experiencing an API outage. Some features like goto or
+        tetostats will not work properly. Please
+        <a href="mailto:cankyre@github.io">report it by email</a> in order for
+        us to investigate the issue.
+      </div>
+    </div>
     <div id="canvas-container">
       <canvas id="chart"></canvas>
     </div>

@@ -21,7 +21,7 @@ const ranks_colors = {
 async function main() {
   const res = await (
     await fetch("https://central-api.thatcookie.repl.co/teto")
-  ).json(); 
+  ).json();
   for (i in res.ranks_boundaries) {
     document.getElementById(
       "ranks"
@@ -30,7 +30,9 @@ async function main() {
     };">
       <div class="a">
         <img src="https://tetr.io/res/league-ranks/${i}.png">
-        <p>${res.ranks_boundaries[i].toFixed()}<span class="hiddable">TR</span></p>
+        <p>${res.ranks_boundaries[
+          i
+        ].toFixed()}<span class="hiddable">TR</span></p>
       </div>
       <div>
         <p>
@@ -51,24 +53,17 @@ async function main() {
   }
 
   function table() {
-    const sortBy = document.getElementById("sort").value
-    const moreData = 
-      sortBy == "apm" ? [
-        "tr", "pps", "vs"
-      ] : (
-        sortBy == "pps" ? [
-          "tr", "apm", "vs"
-        ] : (
-          sortBy == "tr" ? [
-            "apm", "pps", "vs"
-          ] : [
-            "tr", "apm", "pps"
-          ]
-        )
-      )
-    const lb = res.country_lbs[sortBy]
-    str = 
-      `<table class="table">
+    const sortBy = document.getElementById("sort").value;
+    const moreData =
+      sortBy == "apm"
+        ? ["tr", "pps", "vs"]
+        : sortBy == "pps"
+        ? ["tr", "apm", "vs"]
+        : sortBy == "tr"
+        ? ["apm", "pps", "vs"]
+        : ["tr", "apm", "pps"];
+    const lb = res.country_lbs[sortBy];
+    str = `<table class="table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -81,57 +76,73 @@ async function main() {
           </tr>
         </thead>
         <tbody>
-          `
-    j = 1
+          `;
+    j = 1;
     for (i in lb) {
-      str += 
-        `<tr>
+      str += `<tr>
           <th>#${j}</th>
           <td>${i}</td>
           <td><img src="https://tetr.io/res/flags/${i.toLowerCase()}.png" alt=""></td>
           <td>${lb[i].toFixed(2)}</td>
-          <td class="hiddable">${res.country_lbs[moreData[0]][i].toFixed(2)}</td>
-          <td class="hiddable">${res.country_lbs[moreData[1]][i].toFixed(2)}</td>
-          <td class="hiddable">${res.country_lbs[moreData[2]][i].toFixed(2)}</td>
-        </tr>`
-      j++
+          <td class="hiddable">${res.country_lbs[moreData[0]][i].toFixed(
+            2
+          )}</td>
+          <td class="hiddable">${res.country_lbs[moreData[1]][i].toFixed(
+            2
+          )}</td>
+          <td class="hiddable">${res.country_lbs[moreData[2]][i].toFixed(
+            2
+          )}</td>
+        </tr>`;
+      j++;
     }
-    str += "</tbody>"
-    document.getElementById("table").innerHTML = str
+    str += "</tbody>";
+    document.getElementById("table").innerHTML = str;
   }
 
-  table()
-  document.getElementById("sort").onchange = table
+  table();
+  document.getElementById("sort").onchange = table;
 
   const input = document.getElementById("playername");
   input.addEventListener("keyup", async (ev) => {
     if (ev.key == "Enter" && input.value) {
       const textjson = await (
         await fetch(
-          "https://central-api.thatcookie.repl.co/teto/" + encodeURI(input.value)
+          "https://central-api.thatcookie.repl.co/teto/" +
+            encodeURI(input.value)
         )
       ).json();
       if (!textjson["tr"]) return;
-      document.getElementById("playercard").style.display = "flex"
-      badgesStr = ""
+      document.getElementById("playercard").style.display = "flex";
+      badgesStr = "";
       if (textjson.badges.length > 0) {
         for (i in textjson.badges) {
-          badgesStr += `<img src="https://tetr.io/res/badges/${textjson.badges[i]}.png">`
+          badgesStr += `<img src="https://tetr.io/res/badges/${textjson.badges[i]}.png">`;
         }
       }
-      document.getElementById("playercard").innerHTML = 
-      ` <div class="title-box">
+      document.getElementById(
+        "playercard"
+      ).innerHTML = ` <div class="title-box">
           <div class="ubox">
             <h4 class="subtitle is-4">${input.value.toUpperCase()}</h4>
             <img src="https://tetr.io/res/flags/${textjson.country.toLowerCase()}.png"/>
           </div>
           <div class="badges">${badgesStr}</div>
-          ${(textjson.avatar.endsWith("undefined") || textjson.avatar.endsWith("0")) ? "" : `<img src="${textjson.avatar}" class="avatar" alt="Player's avatar" />` }
+          ${
+            textjson.avatar.endsWith("undefined") ||
+            textjson.avatar.endsWith("0")
+              ? ""
+              : `<img src="${textjson.avatar}" class="avatar" alt="Player's avatar" />`
+          }
         </div>
         <div class="card-grid">
           <div class="grid-entry">
             <h4 class="title is-6">TR</h4>
-            <h4 class="subtitle is-6">${textjson.tr.toFixed(2)}<img src="https://tetr.io/res/league-ranks/${textjson.rank}.png" alt=""></h4>
+            <h4 class="subtitle is-6">${textjson.tr.toFixed(
+              2
+            )}<img src="https://tetr.io/res/league-ranks/${
+        textjson.rank
+      }.png" alt=""></h4>
           </div>
           <div class="grid-entry">
             <h4 class="title is-6">APM</h4>
@@ -169,10 +180,9 @@ async function main() {
             <h4 class="title is-6">GE</h4>
             <h4 class="subtitle is-6">${textjson.ge.toFixed(2)}</h4>
           </div>
-        </div>`
+        </div>`;
     }
-  })
+  });
 }
 
 main();
-

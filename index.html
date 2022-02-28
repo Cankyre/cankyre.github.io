@@ -11,6 +11,7 @@
     <title>Cankyre</title>
   </head>
   <body>
+    <script src="./js/pingCentral.js"></script>
     <script>
       const params = new URLSearchParams(window.location.search);
       if (params.has("goto")) {
@@ -27,6 +28,17 @@
     </script>
     <h1 class="title is-2">Cankyre</h1>
     <img src="./img/Cankyre.png" alt="My profile picture" class="pfp" />
+    <div class="message is-danger" id="api-outage-message">
+      <div class="message-header">
+        <h1>API outage</h1>
+      </div>
+      <div class="message-body">
+        We are currently experiencing an API outage. Some features like goto or
+        tetostats will not work properly. Please
+        <a href="mailto:cankyre@github.io">report it by email</a> in order for
+        us to investigate the issue.
+      </div>
+    </div>
     <div class="goto columns" id="goto">
       <div class="column is-one-fifth goto-sign">
         <p class="is-vcentered">goto</p>
@@ -209,9 +221,11 @@
           />
         </div>
         <p>
-          &emsp;A webpage that was inspired by <a href="https://tetrio.team2xh.net/?">TETR.IO Stats by Tenchi</a>.
-          It has the same "Ranks requirements" feature, but it also has country leaderboards and player 
-          cards that has the advanced stats, taken from <a href="https://discord.gg/sTqzbJKTVQ">Sheetbot</a>.
+          &emsp;A webpage that was inspired by
+          <a href="https://tetrio.team2xh.net/?">TETR.IO Stats by Tenchi</a>. It
+          has the same "Ranks requirements" feature, but it also has country
+          leaderboards and player cards that has the advanced stats, taken from
+          <a href="https://discord.gg/sTqzbJKTVQ">Sheetbot</a>.
           <span class="tag is-primary">HTML</span>
           <span class="tag is-primary">CSS</span>
           <span class="tag is-primary">JS</span>

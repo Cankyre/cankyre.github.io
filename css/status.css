@@ -35,6 +35,13 @@ table {
   transform: translate(-50%, 0);
 }
 
+#api-outage-message {
+  width: 40vw;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  display: none;
+}
+
 @media screen and (max-width: 440px) {
   .h {
     display: none;
