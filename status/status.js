@@ -7,6 +7,7 @@ async function getStatuses() {
 getStatuses().then(createChart);
 
 function createChart(datasets) {
+  datasets = datasets.reverse()
   let obj1 = [];
   for (i in datasets) {
     obj1.push({
