@@ -88,6 +88,11 @@ body {
   max-height: 14vw;
 }
 
+.cards-grid.updates {
+  grid-template-rows: 1fr;
+  height: 15vw;
+}
+
 .card:hover {
   border: 2px black solid;
 }
@@ -170,7 +175,7 @@ body {
   font-family: "dripicons-v2";
 }
 
-button.blink > span {
+button > span {
   font-family: "dripicons-v2";
 }
 
