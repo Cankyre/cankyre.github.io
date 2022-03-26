@@ -197,7 +197,7 @@ button > span {
 @media screen and (max-width: 1400px) {
   .cards-grid {
     width: 81vw;
-    height: 81vw;
+    height: 108vw;
   }
   .card {
     min-height: 26vw;
