@@ -148,6 +148,11 @@ body {
   grid-row: 4;
 }
 
+.full-cols {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
 .blink {
   margin-top: auto;
   margin-bottom: 0.8em;
