@@ -18,7 +18,7 @@
       Cankyre's 3-questions request/report form
     </h1>
     <h2 class="subtitle is-4 headtitle">
-      Issue reports/Feature requests for Cankyre products
+      Bug reports/Feature requests for Cankyre products
     </h2>
     <div class="message is-danger" id="api-outage-message">
       <div class="message-header">
@@ -27,11 +27,12 @@
       <div class="message-body">
         We are currently experiencing an API outage. Therefore this form will
         not work as intended. Please
-        <a href="mailto:cankyre@github.io">report it by email</a> in order for
-        us to investigate the issue.
+        <a href="mailto:cankyre@gmail.com">report it by email</a> in order for
+        us to investigate the bug.
       </div>
     </div>
-    <article class="message is-warning">
+    <!--
+      <article class="message is-warning">
       <div class="message-header">Warning</div>
       <div class="message-body">
         If the below form turns out not to work because of a server error,
@@ -40,34 +41,35 @@
         <a href="../index.html#contact">contact me</a> as soon as possible.
       </div>
     </article>
+      -->
     <div class="form-container">
       <form>
         <div class="field is-bordered" id="q1-outer">
           <label for="product" class="label"
-            >1. For which product would you like to report/request?</label
+            >1. Which of my product is the source of your request?</label
           >
           <div class="select">
             <select name="q1" id="q1">
+              <option value="Pouik">Pouik</option>
               <option value="TetoStats">TetoStats</option>
               <option value="ParpaingBot">ParpaingBot</option>
+              <option value="cankyre.github.io">Cankyre.github.io</option>
               <option value="rdparpaing.github.io">Rdparpaing.github.io</option>
               <option value="NyaScript">NyaScript</option>
               <option value="NyaScript-vscode">NyaScript-vscode</option>
               <option value="Tetostats-recorder">Tetostats-recorder</option>
-              <option value="Tetobot">Tetobot</option>
-              <option value="cankyre.github.io">Cankyre.github.io</option>
-              <option value="other">Other (describe in question 3)</option>
+              <option value="Other">Other (describe in question 3)</option>
             </select>
           </div>
         </div>
         <div class="field is-bordered" id="q2-outer">
           <label for="frir" class="label"
-            >2. Are you making an issue report or a feature request?
+            >2. Are you making bug report or a feature request?
           </label>
           <div class="control" id="q2">
             <label class="radio">
               <input type="radio" name="frir" />
-              Issue report
+              Bug report
             </label>
             <label class="radio">
               <input type="radio" name="frir" />
@@ -85,16 +87,14 @@
         </div>
         <div class="field is-bordered" id="q3-outer">
           <label for="message" class="label"
-            >3. Please describe your issue.
-            <span class="tag is-danger is-light">NOTE:</span> if you want me to
-            get in touch, please let an email address or your Discord username.
-            You can also join the support server!</label
-          >
+            >3. Please describe your bug.
+            <span class="tag is-danger is-light">NOTE:</span> You can report once every 5min. You may report multiple things at once.
+        </label>
           <label class="label"></label>
           <div class="control">
             <textarea
               class="textarea"
-              placeholder="Your issue"
+              placeholder="Your bug"
               id="q3"
             ></textarea>
           </div>
