@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'victor mono';
+    src: url("/Assets/VictorMono-Regular.ttf");
+}
+
+body{
+    background-color: #282a36;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+#content {
+    border-left: #44475a solid;
+    border-right: #44475a solid;
+    border-width: 1px;
+    max-width: 800px;
+    font-family: 'victor mono';
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#content h1 {
+    color: #ff79c6
+}
+#content h1 strong{
+    color: #bd93f9
+}
+
+
+#content p {
+    color: #f8f8f2
+}
+
+#content p strong {
+    color: #bd93f9
+}
+
+#content p i {
+    color: #8be9fd
+}
+
+#content p a {
+    color: #ffb86c;
+    font-style: normal;
+    text-decoration:none
+}
+
+#content .paragraphwpic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#content .paragraphwpic p {
+    width: 30%;
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 0;
+}
+
+#content .paragraphwpic img {
+    width: 500px;
+    height: 300px;
+    margin-top: 5px;
+    flex-shrink: 0;
+    border: #44475a solid;
+    border-width: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #44475a;
+    margin: 0 0; padding: 0;
+}
+
+.commandline{
+    background-color: #44475a;
+}
+.commandline >*{
+    color : #8be9fd!important
+}
