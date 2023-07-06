@@ -1,0 +1,25 @@
+---
+import "../Styles/index.css"
+import SubPagesRow from "../Components/SubPagesRow.astro"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Cakey's home directory</title>
+	</head>
+    
+    <body>
+        <div id="content">
+            <h1>/home/alecake/<strong>blog</strong></h1>
+            <div class="commandline">
+				<p> &gt ls ~/subpages/</p>
+			</div>
+			<SubPagesRow/>
+            <p>In construction</p>
+        </div>
+    </body>
+</html>
