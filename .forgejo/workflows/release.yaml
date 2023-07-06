@@ -6,6 +6,6 @@ on:
 jobs:
   test:
     runs-on: docker
-    uses: node:latest
+    uses: alpine:latest
     steps:
       - run: echo All Good
