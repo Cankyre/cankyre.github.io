@@ -5,6 +5,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: docker
     steps:
+      - uses: docker/node
       - run: echo All Good
