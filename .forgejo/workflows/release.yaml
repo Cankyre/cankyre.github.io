@@ -6,10 +6,6 @@ on:
 jobs:
   test:
     runs-on: docker
-<<<<<<< HEAD
     container: node:latest
-=======
-    uses: alpine:latest
->>>>>>> refs/remotes/origin/mistress
     steps:
       - run: echo All Good
