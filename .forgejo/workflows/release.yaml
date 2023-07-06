@@ -6,6 +6,6 @@ on:
 jobs:
   test:
     runs-on: docker
-    image: node:latest
+    uses: node:latest
     steps:
       - run: echo All Good
