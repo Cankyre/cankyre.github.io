@@ -1,6 +1,10 @@
-on: [push]
+on:
+  push:
+    branches:
+      - "mistress"
+
 jobs:
   test:
-    runs-on: docker
+    runs-on: ubuntu-latest
     steps:
       - run: echo All Good
