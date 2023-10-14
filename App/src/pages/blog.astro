@@ -1,6 +1,10 @@
 ---
 import "../Styles/index.css"
+import "../Styles/blogPage.css"
 import SubPagesRow from "../Components/SubPagesRow.astro"
+import BlogPost from "../Components/BlogPost.astro";
+
+const posts = await Astro.glob('./posts/*.md')
 ---
 
 <html lang="en">
@@ -14,12 +18,25 @@ import SubPagesRow from "../Components/SubPagesRow.astro"
     
     <body>
         <div id="content">
-            <h1>/home/alecake/<strong>blog</strong></h1>
+            <h1>/home/<strong>alecake</strong>/<i>blog</i></h1>
             <div class="commandline">
 				<p> &gt ls ~/subpages/</p>
 			</div>
 			<SubPagesRow/>
-            <p>In construction</p>
+			<div class="commandline">
+				<p>&gt ls ~/blogposts/</p>
+			</div>
+			<div id="bloglist">
+				{posts.map(post => (
+					<BlogPost
+						title={post.frontmatter.title}
+						url={post.url}
+						date={post.frontmatter.date}
+						description={post.frontmatter.description}
+					></BlogPost>
+					)
+				)}
+			</div>
         </div>
     </body>
 </html>

@@ -1,0 +1,30 @@
+---
+const { title, description, date, url } = Astro.props;
+---
+
+<div>
+   <span><strong><a href={url}>{title}</a></strong><i>{date}</i></span>
+    <p>{description}</p>
+</div>
+
+<style>
+    div {
+        border-left: #44475a solid;
+        border-right: #44475a solid;
+        border-top: #44475a solid;
+        border-bottom: #44475a solid;
+        border-width: 1px;
+        padding: 15px;
+    }
+    a {
+        text-decoration: none;
+        color: unset
+    }
+    span {
+        display: flex;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+    p {margin: 0}
+
+</style>

@@ -38,18 +38,24 @@ body{
     color: #f8f8f2
 }
 
-#content p strong {
+strong {
     color: #bd93f9
 }
 
-#content p i {
+i {
     color: #8be9fd
 }
 
-#content p a {
+#content a {
     color: #ffb86c;
     font-style: normal;
     text-decoration:none
+}
+
+#content a:hover {
+    background-color: #ffb86c;
+    color: #282a36;
+
 }
 
 #content .paragraphwpic {
