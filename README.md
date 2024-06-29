@@ -1,3 +1,3 @@
 # CakeyWebsite
 
-SEX
+Personal website, will someday convert it to an astro template thingy
