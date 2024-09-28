@@ -2,6 +2,7 @@
 import "../Styles/index.css";
 import ContactsRow from "../Components/ContactRow.astro";
 import FriendsRow from "../Components/FriendsRow.astro";
+import ProjectsRow from "../Components/ProjectsRow.astro";
 ---
 
 <html lang="en">
@@ -41,15 +42,14 @@ import FriendsRow from "../Components/FriendsRow.astro";
                 </div>
                 <p>
                     Hey, I'm <strong>Cankyre</strong>. I'm a game developer,
-                    chess player and arbiter, musician, video games enjoyer and
-                    a <i>huge nerd</i>. I am an admin of the <strong
-                        >Rotation de Parpaing</strong
-                    > community.
+                    chess player and arbiter, musician, computer science
+                    student, video games enjoyer and a <i>huge nerd</i>. I am an
+                    admin of the <strong>Rotation de Parpaing</strong> community.
                     <br />
                     I am 17, French <i>and</i> German, and currently working in the
                     indie game studio called <strong>Agglo</strong> on a game temporarily
                     titled
-                    <strong>Station 19</strong>,which I truly think you will
+                    <strong>Station 19</strong>, which I truly think you will
                     love.
                     <br />
                     <br />
@@ -88,7 +88,8 @@ import FriendsRow from "../Components/FriendsRow.astro";
                     <p>
                         Follow and contribute to <strong>Station 19</strong>'s
                         development using the links below. I am sure you won't
-                        regret it.
+                        regret it. Also, I might make some artistic minigames
+                        while procrastinating. You'll for sure find them there.
                     </p>
                     <div class="gamelinks">
                         <a class="wget" href="https://discord.gg/hAB2STPMSX"
@@ -166,6 +167,11 @@ import FriendsRow from "../Components/FriendsRow.astro";
                 <p>&gt ls ~/important_stuff/important_people/</p>
             </div>
             <FriendsRow />
+
+            <div class="commandline">
+                <p>&gt ls ~/important_stuff/open_source/</p>
+            </div>
+            <ProjectsRow />
 
             <div class="commandline">
                 <p>&gt cat ~/important_stuff/credits.md</p>
