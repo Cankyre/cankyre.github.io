@@ -4,13 +4,13 @@
 }
 
 :root {
-    --background-color: #282a36;
-    --border-color: #44475a;
-    --primary-color: #ff79c6;
-    --secondary-color: #bd93f9;
-    --text-color: #f8f8f2;
-    --link-color: #ffb86c;
-    --highlight-color: #8be9fd;
+    --background-color: #1e1e2e;
+    --border-color: #363a4f;
+    --primary-color: #f5bde6;
+    --secondary-color: #c6a0f6;
+    --text-color: #cad3f5;
+    --link-color: #f5a97f;
+    --highlight-color: #8aadf4;
 }
 
 body {
@@ -31,6 +31,7 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
+    padding-top: 10px;
     flex-grow: 1;
 }
 
@@ -48,11 +49,54 @@ body {
     align-items: center;
 }
 
-#content .mainheader img {
+#content .mainheader .rightheader img {
     margin-top: auto;
     border: var(--border-color) solid;
     border-radius: 50%;
-    width: 10%;
+    width: 100px;
+}
+
+#content .mainheader .rightheader {
+    display: flex;
+    flex: 2;
+    justify-content: flex-end;
+    gap: 2em;
+    align-items: center;
+    height: 100%;
+}
+
+#content .mainheader .rightheader .Banner {
+    content: "";
+    width: 75px;
+    height: 50px;
+    display: block;
+    border-radius: 10px;
+}
+
+#content .mainheader .gaymen {
+    --gaymen-darkgreen: #007c6b;
+    --gaymen-palegreen: #40a4a5;
+    --gaymen-litegreen: #59c8d2;
+    --gaymen-center: #f0efff;
+    --gaymen-liteblue: #7aade0;
+    --gaymen-paleblue: #0b83c9;
+    --gaymen-darkblue: #04336f;
+    background-image: linear-gradient(
+        var(--gaymen-darkgreen) 0%,
+        var(--gaymen-darkgreen) 14.28%,
+        var(--gaymen-palegreen) 14.28%,
+        var(--gaymen-palegreen) 28.58%,
+        var(--gaymen-litegreen) 28.58%,
+        var(--gaymen-litegreen) 42.87%,
+        var(--gaymen-center) 42.87%,
+        var(--gaymen-center) 57.16%,
+        var(--gaymen-liteblue) 57.16%,
+        var(--gaymen-liteblue) 71.45%,
+        var(--gaymen-paleblue) 71.45%,
+        var(--gaymen-paleblue) 85.74%,
+        var(--gaymen-darkblue) 85.74%,
+        var(--gaymen-darkblue) 100%
+    );
 }
 
 #content h1 strong {
@@ -88,12 +132,35 @@ i {
     flex-wrap: wrap;
 }
 
-#content .paragraphwpic p {
+#content .paragraphwpic > p {
     width: 30%;
     flex-grow: 1;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: 0;
+}
+
+#content .paragraphwpic .gamedownload {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    flex-grow: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 0;
+}
+
+#content .paragraphwpic .gamedownload .gamelinks {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#content .paragraphwpic .gamedownload .wget {
+    display: block;
+    text-align: center;
 }
 
 #content .paragraphwpic img,

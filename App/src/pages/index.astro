@@ -1,88 +1,180 @@
 ---
 import "../Styles/index.css";
 import ContactsRow from "../Components/ContactRow.astro";
-import SubPagesRow from "../Components/SubPagesRow.astro";
 import FriendsRow from "../Components/FriendsRow.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Cakey's home directory</title>
-	</head>
-	<body>
-		<div id="content">
-			<h1>/home/<strong>cake</strong></h1>
-			<div class="commandline">
-				<p>&gt ls ~/subpages/</p>
-			</div>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Cankyre's square</title>
+    </head>
+    <body>
+        <div id="content">
+            <div class="mainheader" style="flex: 1;">
+                <h1>/home/<strong>cankyre</strong></h1>
+                <div class="rightheader">
+                    <div class="Banner mb-4 shadow-md rounded gaymen"></div>
+                    <img src="/Assets/pfp.png" />
+                </div>
+            </div>
 
-			<SubPagesRow />
+            <div class="commandline">
+                <p>&gt ls ~/contacts_and_socialmedia/</p>
+            </div>
 
-			<div class="commandline">
-				<p>&gt ls ~/contacts_and_socialmedia/</p>
-			</div>
+            <ContactsRow />
 
-			<ContactsRow />
+            <!-- Will do this later
+            <div class="commandline">
+                <p>&gt ls ~/subpages/</p>
+            </div>
 
-			<div id="intro">
-				<div class="commandline">
-					<p>&gt cat ~/intro.md</p>
-				</div>
-				<p>
-					Howdy~ I'm <strong>Cake</strong>. I'm a software developer, though i
-					enjoy doing basically anything that is actually fun and mostly relates
-					to computers.
-					<br />
-					Other stuff to let you know me better, mh, i'm 20, and i live in italy
-					🍕, yeah, that's it, this is supposed to be a short intro!
-				</p>
-				<hr />
-			</div>
+            <SubPagesRow /> -->
 
-			<div class="commandline">
-				<p>&gt cat ~/intropart2idk.md</p>
-			</div>
+            <div id="intro">
+                <div class="commandline">
+                    <p>&gt cat ~/intro.md</p>
+                </div>
+                <p>
+                    Hey, I'm <strong>Cankyre</strong>. I'm a game developer,
+                    chess player and arbiter, musician, video games enjoyer and
+                    a <i>huge nerd</i>. I am an admin of the <strong
+                        >Rotation de Parpaing</strong
+                    > community.
+                    <br />
+                    I am 17, French <i>and</i> German, and currently working in the
+                    indie game studio called <strong>Agglo</strong> on a game temporarily
+                    titled
+                    <strong>Station 19</strong>,which I truly think you will
+                    love.
+                    <br />
+                    <br />
+                    My profile picture has been made by <strong>Mylow</strong>,
+                    one of my dearest friends.
+                </p>
+                <hr />
+            </div>
 
-			<span class="paragraphwpic">
-				<p>
-					If you are my friend you may already know, but I'm very much obsessed
-					with open source crap, that's why this website is hosted on my git
-					istance, and that's why i use linux, specifically, i'm using <a
-					href="https://archlinux.org/">Arch</a> with KDE, which is a really
-					nice combo.
-				</p>
-				<img src="/Assets/Homepage/desktop.jpg" />
-			</span>
+            <div class="commandline">
+                <p>&gt cat ~/mygames/station19.md</p>
+            </div>
 
-			<div class="commandline">
-				<p>&gt cat ~/randomstuff/interests.md</p>
-			</div>
-			<span class="paragraphwpic">
-				<p>
-					My interests...well, i do enjoy a lot of things, my main ones focus on
-					software, i like to learn new technologies, even if it takes me a
-					while. And, as you might have noticed, dear reader, my wallpaper is
-					from an anime, evangelion, and i <i>really like</i> evangelion and with
-					like, i mean that it's one of my favorite pieces of media ever, the third
-					impact just resonates with me so much, both in the anime ending, and the
-					movie.
-				</p>
-				<img class="small" src="/Assets/Homepage/thirdimpact.png" />
-			</span>
+            <span class="paragraphwpic">
+                <div class="gamedownload">
+                    <span class="paragraphwpic">
+                        <p>
+                            You don't remember <i>anything</i>. You wake up,
+                            stuck in a space station in lock&#8209;down mode.
+                            You try to read the manual, but it's unclear.
+                            Discover what happened to your crew and escape.
+                            Introducing <strong>Station 19</strong>, a
+                            intricated puzzle game with a deep and emotional
+                            story where you need to understand the inner
+                            workings of the complicated station's mainframe
+                            computer in order to make the rest of your life <em
+                                >plausible</em
+                            >.
+                        </p>
+                        <img
+                            src="/Assets/Homepage/agglo.png"
+                            alt="Agglo's logo"
+                            style="width: 130px; height: 130px; border-radius: 50%;"
+                        />
+                    </span>
+                    <p>
+                        Follow and contribute to <strong>Station 19</strong>'s
+                        development using the links below. I am sure you won't
+                        regret it.
+                    </p>
+                    <div class="gamelinks">
+                        <a class="wget" href="https://discord.gg/hAB2STPMSX"
+                            >&gt curl agglo_discord
+                        </a>
+                        <a class="wget" href="https://x.com/@agglogames"
+                            >&gt curl agglo_twitter
+                        </a>
+                    </div>
+                </div>
+            </span>
 
-			<p>
-				Other than that, i do enjoy coding, making websites, writing css,
-				drawing, making pixel art, trying new technologies... i have quite a lot
-				of interests, that i am not going to write here, for now.
-			</p>
-			<div class="commandline">
-				<p>&gt ls ~/important_stuff/important_people/</p>
-			</div>
-			<FriendsRow />
-		</div>
-	</body>
+            <div class="commandline">
+                <p>&gt cat ~/mygames/pouik.md</p>
+            </div>
+
+            <span class="paragraphwpic">
+                <div class="gamedownload">
+                    <p>
+                        <strong>Pouik</strong> is the first game I ever decided to
+                        release. I care about it deeply. For personal reasons, I
+                        had to stop its development and couldn't go through with
+                        the plans I had for it. I kept it in the dark for a while,
+                        but I finally decided to make a final build and release it
+                        in an <i>as is</i> state.
+                        <br />
+                        <br />
+                        <strong>Pouik</strong> is a game about <strong
+                            >Jerry</strong
+                        >. <strong>Jerry</strong> has no legs. <strong
+                            >Jerry</strong
+                        > hops around. It is an arcade, grid-based game filled to
+                        the brim with spikes, lasers, dubious pills, and more. So
+                        many things are happening in <strong>Jerry</strong>'s
+                        world. It is on the edge between a <i>thinking game</i> and
+                        an <i>arcade game</i> while remaining as pleasing to play
+                        as possible.
+                    </p>
+                    <a class="wget" href="https://cankyre.itch.io/pouik"
+                        >&gt wget ~/mygames/pouik.zip
+                    </a>
+                </div>
+                <img
+                    src="https://img.itch.zone/aW1hZ2UvMjEzMjcxMy8xMjU2ODUwMy5qcGVn/347x500/4fo2%2FD.jpeg"
+                    style="width: 200px;"
+                />
+            </span>
+
+            <div class="commandline">
+                <p>&gt cat ~/mygames/bouicheme.md</p>
+            </div>
+            <span class="paragraphwpic">
+                <img
+                    src="/Assets/Homepage/bouicheme.png"
+                    style="width: 200px;"
+                />
+                <div class="gamedownload">
+                    <p>
+                        Bouicheme is a game I made for the a <a
+                            href="https://www.nuitducode.net/"
+                            >french game jam</a
+                        > with
+                        <strong>Avlis</strong> and <strong>Jegvet</strong>. In
+                        this runner, you need to build and destroy blocks to get
+                        to the key.
+                    </p>
+                    <a class="wget" href="https://cankyre.itch.io/bouicheme"
+                        >&gt wget ~/mygames/bouicheme.zip
+                    </a>
+                </div>
+            </span>
+            <br />
+            <hr />
+            <div class="commandline">
+                <p>&gt ls ~/important_stuff/important_people/</p>
+            </div>
+            <FriendsRow />
+
+            <div class="commandline">
+                <p>&gt cat ~/important_stuff/credits.md</p>
+            </div>
+            <p>
+                This website was forked from <a href="https://cakey.me"
+                    >Cakey's Website</a
+                >. Thanks a lot to her.
+            </p>
+        </div>
+    </body>
 </html>
