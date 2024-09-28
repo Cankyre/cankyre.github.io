@@ -1,17 +1,17 @@
 {
-  "name": "src",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/language-server": "^2.4.1",
-    "@astropub/md": "^0.2.0",
-    "astro": "^2.7.2"
-  }
+    "name": "src",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/language-server": "^2.4.1",
+        "@astropub/md": "^0.2.0",
+        "astro": "^2.7.2"
+    }
 }

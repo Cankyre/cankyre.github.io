@@ -3,7 +3,7 @@ const { title, description, date, url } = Astro.props;
 ---
 
 <div>
-   <span><strong><a href={url}>{title}</a></strong><i>{date}</i></span>
+    <span><strong><a href={url}>{title}</a></strong><i>{date}</i></span>
     <p>{description}</p>
 </div>
 
@@ -18,13 +18,14 @@ const { title, description, date, url } = Astro.props;
     }
     a {
         text-decoration: none;
-        color: unset
+        color: unset;
     }
     span {
         display: flex;
         flex-grow: 1;
         justify-content: space-between;
     }
-    p {margin: 0}
-
+    p {
+        margin: 0;
+    }
 </style>
