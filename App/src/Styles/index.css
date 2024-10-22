@@ -27,7 +27,7 @@ body {
     border-right: var(--border-color) solid;
     border-width: 1px;
     max-width: 950px;
-    font-family: "victor mono";
+    font-family: "Fira Code", "victor mono";
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
@@ -199,6 +199,7 @@ hr {
 }
 
 table {
+    width: 100%;
     border-collapse: collapse;
     color: var(--link-color);
 }
@@ -209,4 +210,13 @@ td {
     border-left: 1px solid var(--link-color);
     border-right: 1px solid var(--link-color);
     padding: 5px;
+}
+
+.parrots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
